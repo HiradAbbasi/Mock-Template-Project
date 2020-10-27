@@ -6,6 +6,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -17,6 +18,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0 30px;
   border-bottom: 0.5px solid rgba(90, 90, 90, 0.2);
 }
@@ -110,8 +112,9 @@ span {
 }
 
 .slide img {
+  min-height: 530px;
   height: 100%;
-  min-height: 520px;
+  object-fit: cover;
 }
 
 .slideshow {
@@ -157,7 +160,9 @@ span {
   margin: 0 auto;
   font-size: 4.5rem;
   font-weight: 700;
-  width: 900px;
+  max-width: 900px;
+  line-height: 1.3;
+  font-family: 'Roboto', sans-serif;
 }
 
 .overlay h3 {
@@ -174,6 +179,7 @@ span {
   padding: 10px 20px;
   margin-bottom: 20px;
   font-weight: 700;
+  font-size: 1.055rem;
 }
 
 .slider-list {
@@ -183,14 +189,18 @@ span {
 }
 
 .slider-list ul {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 1170px;
   padding: 0;
-  margin: 0 6.75%;
+  margin: 0 auto;
 }
 
 .slider-list li {
   display: inline-block;
   padding: 15px 30px;
   font-weight: 500;
+  margin-right: 1px;
 }
 
 .blue-highlighted {
@@ -203,19 +213,21 @@ span {
   color: #737E8F;
 }
 
-.more-info {
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  max-width: 1170px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .search-info {
   padding: 30px 0 30px;
   background: #f8fafd;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.more-info {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
 }
 
 .more-info li {
@@ -230,9 +242,11 @@ span {
 
 .search {
   background-color: #3396d1;
-  color: white;
-  text-align: right;
   font-weight: 700;
+}
+
+.normal {
+  color: gray;
 }
 
 .search:hover {
@@ -255,12 +269,13 @@ span {
   font-weight: 700;
   text-align: center;
   margin: 70px 0 15px 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .popular p {
   margin: 0 auto;
   text-align: center;
-  width: 700px;
+  max-width: 700px;
   font-size: 1.1rem;
   color: #606269;
 }
@@ -280,7 +295,7 @@ span {
   max-width: 1170px;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
-  margin: 60px auto;
+  margin: 60px auto 100px auto;
 }
 
 .container {
@@ -307,7 +322,6 @@ span {
   color: #000;
   font-size: 12px;
   text-align: center;
-  z-index: 99;
   text-transform: uppercase;
   font-weight: 900;
   padding: 5px 10px;
@@ -408,6 +422,241 @@ span {
   transition: .5s;
 }
 
+.highlights {
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  opacity: .5;
+}
+
+.gray-theme {
+  background-image: url("fixed-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  opacity: 1 !important;
+}
+
+.items h2 {
+  font-size: 4.375rem;
+  margin: 0 0 25px 0;
+  font-weight: 700;
+  color: #fff;
+  line-height: 80px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.items h3 {
+  font-size: 2rem;
+  margin: 0 0 15px 0;
+  font-weight: 500;
+  color: #FFE400;
+  font-family: 'Roboto', sans-serif;
+}
+
+.play-button {
+  margin-bottom: 20px;
+  background-color: #FFE400;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-play {
+  color: #000;
+  font-size: 1.7rem;
+}
+
+.best-holiday {
+  text-align: center;
+  background-color: #f7f9fb;
+}
+
+.best-holiday h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 70px 0 15px 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+.best-holiday p {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+  font-size: 1.1rem;
+  color: #606269;
+}
+
+.holiday-packages {
+  background-color: #f7f9fb;
+}
+
+.holiday {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+.holiday-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.holiday-flex li {
+  position: relative;
+  /*border: 1px solid red;*/
+  background-color: white;
+  border-radius: 10px;
+  max-width: 570px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px auto;
+  -webkit-box-shadow: 0px 0px 30px -9px rgba(135, 132, 135, 1);
+  -moz-box-shadow: 0px 0px 30px -9px rgba(135, 132, 135, 1);
+  box-shadow: 0px 0px 30px -9px rgba(135, 132, 135, 1);
+}
+
+.holiday-right {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 314px;
+  width: 100%;
+}
+
+.holiday-left img {
+  width: 256.5px;
+  border-radius: 10px 0 0 10px;
+  object-fit: cover;
+}
+
+.best-seller {
+  background-color: #FFE400;
+  color: #000;
+  position: absolute;
+  text-align: center;
+  left: 10px;
+  top: 10px;
+  font-weight: 700;
+  font-size: .95rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.holiday-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottom-flex-alignment {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /*border: 1px solid red;*/
+}
+
+.star-reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  /*border: 1px solid red;*/
+  width: 70%;
+}
+
+.fa-star {
+  color: goldenrod;
+  font-size: .8rem;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*border: 1px solid red;*/
+  width: 30%;
+  line-height: 1.3;
+}
+
+.holiday-top h2 {
+  font-size: 1.48rem;
+  color: black;
+  font-weight: 700;
+}
+
+.holiday-top h3 {
+  font-size: .94rem;
+  color: #5191fA;
+  font-weight: 500;
+}
+
+.holiday-top h2:hover {
+  color: #5191fA;
+  transition: .2s;
+}
+
+.holiday-top p {
+  font-size: .934rem;
+  color: #8D8D8D;
+}
+
+.star-reviews p {
+  font-size: .8rem;
+  color: #8D8D8D;
+}
+
+.holiday-top h2,
+.holiday-top h3,
+.holiday-top p {
+  margin: 0;
+}
+
+.bottom-flex-alignment p {
+  margin: 0;
+}
+
+.price p {
+  margin: 0;
+}
+
+.small-price-font {
+  font-size: 1.075rem;
+  font-weight: 500;
+  color: #8D8D8D;
+}
+
+.big-price-font {
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: #333;
+}
+
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 
@@ -441,7 +690,35 @@ span {
     max-width: 690px;
     width: 100%;
   }
+  .holiday-flex li {
+    position: relative;
+    /*border: 1px solid red;*/
+    max-width: 690px;
+    width: 100%;
+  }
+  .holiday-right {
+    max-width: 379.5px;
+    width: 100%;
+  }
+  .holiday-left img {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+  }
+  .more-info {
+    max-width: 690px;
+  }
+  .more-info li {
+    width: 31.5%;
+    margin: 8px 0;
+  }
+  .slider-list ul {
+    max-width: 690px;
+  }
 }
+
+
+/*The "Popular Destinations, "Best Holiday", and "Search quaries" mobile responsive */
 
 @media (max-width: 720px) {
   .grid-container {
@@ -464,5 +741,80 @@ span {
   .popular p {
     max-width: 510px;
     width: 100%;
+  }
+  .holiday-flex li {
+    position: relative;
+    /*border: 1px solid red;*/
+    max-width: 510px;
+    width: 100%;
+  }
+  .holiday-right {
+    max-width: 100%;
+    width: 120%;
+  }
+  .holiday-left img {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+  }
+  .star-reviews {
+    width: 65%;
+  }
+  .price {
+    width: 35%;
+  }
+  .more-info {
+    max-width: 510px;
+  }
+  .more-info li {
+    width: 48.2%;
+    margin: 8px 0;
+  }
+  .slider-list ul {
+    max-width: 510px;
+  }
+}
+
+
+/*The holiday section mobile responsive after 576px*/
+
+@media (max-width: 576px) {
+  .holiday-flex li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid red;*/
+    max-width: 510px;
+    width: 100%;
+  }
+  .holiday-right {
+    max-width: 100%;
+    width: 120%;
+  }
+  .holiday-left img {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    object-fit: cover;
+  }
+  .star-reviews {
+    width: 80%;
+  }
+  .price {
+    width: 20%;
+  }
+}
+
+
+/*The nav bar and the icons disapper to allow resizing for mobile*/
+
+@media (max-width: 965px) {
+  .top-nav li {
+    display: none;
+  }
+  .bottom-nav li {
+    display: none;
+  }
+  span {
+    display: none;
   }
 }
